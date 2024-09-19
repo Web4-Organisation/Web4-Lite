@@ -242,4 +242,3 @@ $C['POST_TYPE_COVER_UPDATE'] = 2;
 
 $LANGS = array();
 $LANGS['English'] = "en";
-
