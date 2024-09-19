@@ -1,0 +1,17 @@
+{
+    "config": {
+        "platform": {
+            "php": "8.0"
+        }
+    },
+    "require": {
+        "aws/aws-sdk-php": "*",
+        "google/apiclient": "*",
+        "google/cloud-vision": "*",
+        "google/cloud-storage": "*",
+        "google/recaptcha": "*",
+        "kreait/firebase-php": "*",
+        "stripe/stripe-php": "*",
+        "facebook/graph-sdk": "*"
+    }
+}

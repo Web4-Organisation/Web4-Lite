@@ -1,0 +1,181 @@
+@charset "UTF-8";
+
+:root{
+
+    --icon-tint: invert(16%) sepia(1%) saturate(1%) hue-rotate(22deg) brightness(94%) contrast(91%);
+
+    --main_page_background: #2e9fff;
+
+    --header_height: 39px;
+    --header_background: #4A76A8;
+    --header_border_bottom: 1px solid #4872A3;
+    --header_logo: url(/img/logo.png);
+    --header_logo_height: 28px;
+    --header_logo_width: 90px;
+    --header_burger_background: #ffffff;
+    --header_button_text_color: #ffffff;
+    --header_button_hover_background_color: rgba(98, 153, 224, 0.61);
+    --header_search_box_background: #224b7a;
+
+    --common_body_background: #EDEEF0;
+    --common_page_background: #FFFFFF;
+    --common_page_shadow: 0 2px 2px 0 #DCE1E6, 0 1px 5px 0 #DCE1E6, 0 3px 1px -2px #E7E8EC;
+    --common_page_border_radius: 2px;
+
+    --button_border_radius: 3px;
+
+    --button_primary_color: #5181b8 !important;
+    --button_primary_hover_color: #5b88bd;
+    --button_primary_text_color: #FFFFFF;
+    --button_primary_text_hover_color: #FFFFFF;
+
+    --button_secondary_color: #c5d3e4 !important;;
+    --button_secondary_hover_color: #c0cee0;
+    --button_secondary_text_color: #55769f;
+    --button_secondary_text_hover_color: #4d6c93;
+
+    --button_disabled_color: rgba(0,0,0,.05) !important;
+    --button_disabled_hover_color: rgba(0, 0, 0, 0.13);
+    --button_disabled_text_color: #0e0e10 !important;
+
+    --button_green_color: #68b35d !important;
+    --button_green_hover_color: #74bd69;
+    --button_green_text_color: #fff;
+    --button_green_text_hover_color: #fff;
+
+    --button_more_color: #d8dce2 !important;;
+    --button_more_hover_color: #e1e5eb;
+    --button_more_text_color: #285473;
+    --button_more_text_hover_color: #285473;
+
+    --button_link_color: transparent !important;;
+    --button_link_hover_color: #e1e5eb;
+    --button_link_text_color: #54759e;
+    --button_link_hover_text_color: #285473;
+
+    --button_tinted_color: #D8E2ED;
+    --button_tinted_hover_color: #CEDFF5;
+    --button_tinted_text_color: #55769f;
+    --button_tinted_hover_text_color: #3C71E5;
+
+    --button_flat_color: transparent;
+    --button_flat_hover_color: #E1E7ED;
+    --button_flat_text_color: #3a6d99;
+
+    --button_card_action_color: #d8dce2 !important;;
+    --button_card_action_hover_color: #e1e5eb;
+    --button_card_action_text_color: #285473;
+    --button_card_action_hover_text_color: #efeff1;
+
+    --item_link_content: rgba(84, 117, 158, 0.04);
+    --item_footer_link_color: #606770;
+    --item_footer_active_link_color: #EE2A44;
+    --item_footer_button_color: transparent;
+    --item_footer_button_hover_color: var(--button_more_hover_color);
+    --item_footer_button_border_radius: 3px;
+    --item_featured_shadow: 0 2px 0 0 #ce5b3a, 0 0 0 1px #ea7351;
+    --item_repost_background: #f3f1f1;
+
+    --switch_button_off_background_color: #CCC;
+    --switch_button_on_background_color: #4A76A8;
+    --switch_button_disabled_background_color: #a19b9b;
+    --switch_button_slider_background_color: #FFF;
+
+    --separator_common: rgba(0, 0, 0, 0.125);
+    --separator_alternate: #E7E8EC;
+
+    --card_border_radius: 0.25rem;
+    --default_border_radius: 0.25rem;
+
+    --icon_tint: #7D9CB8;
+    --icon_online: #48c00b;
+
+    --counter_text_color: white;
+    --counter_background_color: #cd030d;
+
+    --progress_bar_color: #51A3FB;
+    --loader_color: #51A3FB;
+    --cover_wrapper_color: #ecf7fe;
+
+    --photo_wrapper_color: #cbebf7;
+    --photo_wrapper_border_color: #ffffff;
+    --photo_wrapper_border: 4px solid;
+
+    --side_menu_icon_tint: #99B1C6;
+    --side_menu_icon_tint_hover: #7D9CB8;
+    --side_menu_text_color: #285473;
+    --side_menu_text_color_hover: #285473;
+    --side_menu_li: transparent;
+    --side_menu_li_hover: #e1e5eb;
+    --side_menu_li_selected: #d8dce2;
+    --side_menu_border_radius: 3px;
+
+    --input_text_backgroud: #FFFFFF;
+    --input_text_color: #5f6979;
+    --input_text_placeholder_color: #a6aebb;
+    --input_text_placeholder_color_focus: #a6aebb;
+    --input_text_border: 1px solid #edeff1;
+    --input_text_border_focus: 1px solid #CCD0D5;
+
+    --form_footer_background: #fcfcfc;
+
+    --checkbox_label_background: #fafafa;
+    --checkbox_checked_label_background: rgba(45, 114, 217, 0.1);
+
+    --text_primary: #000000;
+    --text_link: #54759e;
+    --text_link_hover: #415e80;
+    --text_title: #000000;
+    --text_date: #666;
+    --text_sub_title: #626d7a;
+    --text_footer_link: #394e66;
+
+    --header_message_background: #588fe1;
+    --header_message_border_radius: 3px;
+    --header_message_text_color: #ffffff;
+    --header_message_shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 2px 1px -2px rgba(0, 0, 0, 0.12);
+
+    --comment_bubble_background: #F2F2F2;
+
+    --ls_menu_item_color: #2a5885;
+    --ls_menu_selected_item_backround: #f0f2f5;
+    --ls_menu_selected_item_color: #000000;
+    --ls_menu_selected_item_border_left_color: #5181b8;
+
+    --dropdown_menu_background: #FFFFFF;
+    --dropdown_menu_color: var(--text_title);
+    --dropdown_menu_hover_background: #F2F2F2;
+    --dropdown_menu_shadow: rgba(0, 0, 0, .3) 0 1px 2px 0, rgba(0, 0, 0, .15) 0 3px 6px 2px;
+
+    --verified_badge_background: #5890FF;
+
+    /* Exetended list item */
+
+    --extended_cards_list_border: 2px solid;
+    --extended_cards_list_border_color: white;
+
+    /*  Alerts  */
+
+    --alert_border_radius: 3px;
+
+    --alert_warning_color: #fff;
+    --alert_warning_background_color: #F7B928;
+    --alert_warning_border_color: transparent;
+
+    --alert_success_color: #fff;
+    --alert_success_background_color: rgba(65, 165, 109, 0.61);
+    --alert_success_border_color: transparent;
+
+    --alert_danger_color: #fff;
+    --alert_danger_background_color: #F02849;
+    --alert_danger_border_color: transparent;
+
+    --alert_info_color: #0c5460;
+    --alert_info_background_color: #d1ecf1;
+    --alert_info_border_color: transparent;
+
+    /*  Reactions  */
+
+    --reactions_box_background: #FFFFFF;
+    --reactions_box_shadow: 0 2px 2px 0 #DCE1E6, 0 1px 5px 0 #DCE1E6, 0 3px 1px -2px #E7E8EC;
+}

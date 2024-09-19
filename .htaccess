@@ -1,0 +1,19 @@
+
+
+#SetEnv APPLICATION_ENV development
+
+DirectoryIndex /public/index.php
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^(.+) $1 [L]
+RewriteCond %{DOCUMENT_ROOT}/public%{REQUEST_URI} -f
+RewriteRule ^(.+) /public/$1 [L]
+
+RewriteEngine on 
+ 
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+ 
+RewriteRule ^(.*)$ /public/index.php?q=$1 [L,QSA]
+
+#RewriteRule !\.(js|ico|gif|jpg|png|css|xml|xslt)$ /public/index.php

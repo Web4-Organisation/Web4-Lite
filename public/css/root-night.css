@@ -1,0 +1,182 @@
+@charset "UTF-8";
+
+:root{
+
+    --icon-tint: invert(56%) sepia(12%) saturate(18%) hue-rotate(328deg) brightness(95%) contrast(88%);
+
+    --main_page_background: #202124;
+
+    --header_height: 39px;
+    --header_background: #292A2D;
+    --header_border_bottom: 1px solid #3F4042;
+    --header_logo: url(/img/logo.png);
+    --header_logo_height: 28px;
+    --header_logo_width: 90px;
+    --header_burger_background: #E5E5E6;
+    --header_button_text_color: #E5E5E6;
+    --header_button_hover_background_color: rgba(174, 183, 194, 0.12);
+    --header_search_box_background: #202123;
+
+    --common_body_background: #202124;
+    --common_page_background: #292A2D;
+    --common_page_shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+    --common_page_border_radius: 2px;
+    --common_page_border_color: 95, 99, 104;
+
+    --button_border_radius: 3px;
+
+    --button_primary_color: #0078d4 !important;;
+    --button_primary_hover_color: #006cbe;
+    --button_primary_text_color: #FFFFFF;
+    --button_primary_text_hover_color: #FFFFFF;
+
+    --button_secondary_color: #f0f2f5 !important;;
+    --button_secondary_hover_color: #cfd3d9;
+    --button_secondary_text_color: #285473;
+    --button_secondary_text_hover_color: #285473;
+
+    --button_disabled_color: #3A3A3D !important;
+    --button_disabled_hover_color: #414145;
+    --button_disabled_text_color: #efeff1 !important;
+
+    --button_green_color: #68b35d !important;
+    --button_green_hover_color: #74bd69;
+    --button_green_text_color: #fff;
+    --button_green_text_hover_color: #fff;
+
+    --button_more_color: #3A3B3C !important;;
+    --button_more_hover_color: #3d3d40;
+    --button_more_text_color: #efeff1;
+    --button_more_text_hover_color: #efeff1;
+
+    --button_link_color: transparent !important;;
+    --button_link_hover_color: #3d3d40;
+    --button_link_text_color: #8AB4F8;
+    --button_link_hover_text_color: #efeff1;
+
+    --button_tinted_color: #263951;
+    --button_tinted_hover_color: #3C4D63;
+    --button_tinted_text_color: #2B81FA;
+    --button_tinted_hover_text_color: #2B81FA;
+
+    --button_flat_color: transparent;
+    --button_flat_hover_color: #323338;
+    --button_flat_text_color: #8AB4F8;
+
+    --button_card_action_color: #323338 !important;;
+    --button_card_action_hover_color: #34353A;
+    --button_card_action_text_color: #efeff1;
+    --button_card_action_hover_text_color: #efeff1;
+
+    --item_link_content: rgba(84, 117, 158, 0.31);
+    --item_footer_link_color: #6d90c7;
+    --item_footer_active_link_color: #EE2A44;
+    --item_footer_button_color: transparent;
+    --item_footer_button_hover_color: var(--button_more_hover_color);
+    --item_footer_button_border_radius: 3px;
+    --item_featured_shadow: 0 2px 0 0 #a84f36, 0 0 0 1px #ac5a44;
+    --item_repost_background: #4050652e;
+
+    --switch_button_off_background_color: #CCC;
+    --switch_button_on_background_color: #0078d4;
+    --switch_button_disabled_background_color: #a19b9b;
+    --switch_button_slider_background_color: #FFF;
+
+    --separator_common: rgba(0, 0, 0, 0.2);
+    --separator_alternate: #a09fa1;
+
+    --card_border_radius: 0.25rem;
+    --default_border_radius: 0.25rem;
+
+    --icon_tint: #E8EAED;
+    --icon_online: #48c00b;
+
+    --counter_text_color: white;
+    --counter_background_color: #cd030d;
+
+    --progress_bar_color: #51A3FB;
+    --loader_color: #51A3FB;
+    --cover_wrapper_color: #ecf7fe;
+
+    --photo_wrapper_color: #cbebf7;
+    --photo_wrapper_border_color: #ffffff;
+    --photo_wrapper_border: 4px solid;
+
+    --side_menu_icon_tint: #779dd9;
+    --side_menu_icon_tint_hover: #779dd9;
+    --side_menu_text_color: #8AB4F8;
+    --side_menu_text_color_hover: #8AB4F8;
+    --side_menu_li: transparent;
+    --side_menu_li_hover: #3A3B3C;
+    --side_menu_li_selected: #3A3B3C;
+    --side_menu_border_radius: 3px;
+
+    --input_text_backgroud: #3A3C3D;
+    --input_text_color: #d9dce0;
+    --input_text_placeholder_color: #a6aebb;
+    --input_text_placeholder_color_focus: #a6aebb;
+    --input_text_border: 1px solid #3f4c65;
+    --input_text_border_focus: 1px solid #5A6F93;
+
+    --form_footer_background: #292A2D;
+
+    --checkbox_label_background: #34353A;
+    --checkbox_checked_label_background: #486aad;
+
+    --text_primary: #E8EAED;
+    --text_link: #8AB4F8;
+    --text_link_hover: #5672a1;
+    --text_title: #E8EAED;
+    --text_date: #A1A1A1;
+    --text_sub_title: #d9dce0;
+    --text_footer_link: #8AB4F8;
+
+    --header_message_background: #588fe1;
+    --header_message_border_radius: 3px;
+    --header_message_text_color: #ffffff;
+    --header_message_shadow: var(--common_page_shadow);
+
+    --comment_bubble_background: #34353A;
+
+    --ls_menu_item_color: #8AB4F8;
+    --ls_menu_selected_item_backround: #34353A;
+    --ls_menu_selected_item_color: #8AB4F8;
+    --ls_menu_selected_item_border_left_color: #8AB4F8;;
+
+    --dropdown_menu_background: #2D2E31;
+    --dropdown_menu_color: var(--text_title);
+    --dropdown_menu_hover_background: #3A3B3C;
+    --dropdown_menu_shadow: rgba(0, 0, 0, .3) 0 1px 2px 0, rgba(0, 0, 0, .15) 0 3px 6px 2px;
+
+    --verified_badge_background: #0082FC;
+
+    /* Exetended list item */
+
+    --extended_cards_list_border: 2px solid;
+    --extended_cards_list_border_color: white;
+
+    /*  Alerts  */
+
+    --alert_border_radius: 3px;
+
+    --alert_warning_color: #fff;
+    --alert_warning_background_color: #e8af29;
+    --alert_warning_border_color: transparent;
+
+    --alert_success_color: #fff;
+    --alert_success_background_color: rgba(65, 165, 109, 0.61);
+    --alert_success_border_color: transparent;
+
+    --alert_danger_color: #fff;
+    --alert_danger_background_color: #e72a49;
+    --alert_danger_border_color: transparent;
+
+    --alert_info_color: #0c5460;
+    --alert_info_background_color: #d1ecf1;
+    --alert_info_border_color: transparent;
+
+    /*  Reactions  */
+
+    --reactions_box_background: #202124;
+    --reactions_box_shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+}

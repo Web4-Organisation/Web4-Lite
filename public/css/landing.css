@@ -1,0 +1,298 @@
+.w-full {
+    display: block;
+    width: 100%;
+}
+
+.txt1 {
+    font-family: Poppins-Regular;
+    font-size: 13px;
+    line-height: 1.4;
+    color: #999999;
+}
+
+.txt2 {
+    font-family: Poppins-Regular;
+    font-size: 13px;
+    line-height: 1.4;
+    color: #00ad5f;
+}
+
+.txt3 {
+    font-family: Poppins-Regular;
+    font-size: 15px;
+    line-height: 1.4;
+    color: #00ad5f;
+    text-transform: uppercase;
+}
+
+/*==================================================================
+[ Size ]*/
+.size1 {
+    width: 355px;
+    max-width: 100%;
+}
+
+.size2 {
+    width: calc(100% - 43px);
+}
+
+
+/*//////////////////////////////////////////////////////////////////
+[ login ]*/
+
+.home {
+    background-image: url(/img/index_bg.png);
+    background-size: cover;
+    background-color: var(--main_page_background);
+}
+
+.home #main-footer {
+    background-color: transparent !important;
+    margin-top: 5px;
+    padding-top: 0px;
+    padding-bottom: 30px;
+}
+
+.limiter {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.container-login100 {
+    width: 100%;
+    min-height: calc(100vh - 400px);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background: transparent;
+}
+
+.signup-page .container-login100 {
+
+    min-height: calc(100vh - 200px);
+}
+
+.wrap-login100 {
+    width: 780px;
+    background: var(--common_page_background);
+    overflow: hidden;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    flex-direction: row-reverse;
+    box-shadow: 0 5px 15px rgba(0,0,0,.35);
+}
+
+.wrap-login100 .standard-page {
+    width: 100%;
+}
+
+.wrap-login100 .opt-in {
+    width: 100%;
+}
+
+/*==================================================================
+[ login more ]*/
+.login100-more {
+    width: 55%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    background-image: url('/img/3.jpg');
+}
+
+.signup-page .login100-more {
+    width: 50%;
+}
+
+.login100-more .login100_content {
+    word-break: break-word;
+    color: #fff;
+    align-items: center;
+    height: 100%;
+    position: absolute;
+    padding: 30px 40px;
+    font-family: Lato,sans-serif;
+    top: 0;
+}
+
+.login100_content h1 {
+    font-size: 36px;
+    margin-top: 0;
+    font-weight: 800;
+}
+
+.login100_content p {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.login100-more::before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.3);
+}
+
+
+
+/*==================================================================
+[ Form ]*/
+
+.login100-form {
+    width: 45%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px 45px 40px 45px;
+}
+
+.signup-page .login100-form {
+    width: 50%;
+}
+
+.login100-form-title {
+    font-size: 20px;
+    color: var(--text_title);
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    width: 100%;
+    display: block;
+    padding-bottom: 180px;
+}
+
+#signup-form .login100-form-title {
+    padding-bottom: 100px;
+}
+
+.login100-form p {
+
+    width: 100%;
+}
+
+
+/*------------------------------------------------------------------
+[ Responsive ]*/
+
+@media (max-width: 992px) {
+    .login100-form {
+        width: 60%;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .login100-more {
+        width: 40%;
+    }
+}
+
+@media (max-width: 768px) {
+    .login100-form {
+        width: 100%;
+    }
+
+    .login100-more {
+        width: 100%;
+    }
+
+    .signup-page .login100-form {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .login100-form {
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 50px;
+    }
+
+    .login100-form-title {
+        padding-top: 20px;
+        padding-bottom: 80px;
+    }
+}
+
+
+/* */
+
+.wrap-landing-info-container {
+
+    width: 100%;
+    min-height: 100px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background: transparent;
+    margin: 40px 0 70px 0;
+}
+
+.wrap-landing-info {
+
+    text-align: center;
+    font-size: 14px;
+    font-weight: bolder;
+    color: white;
+    text-shadow: 0 0 10px #666;
+    width: 780px;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrap-landing-info-container.explore-promo {
+
+    margin-top: 70px;
+    margin-bottom: 20px;
+}
+
+.explore-promo .wrap-landing-info{
+
+    padding-bottom: 7px;
+    padding-top: 7px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.explore-promo .button {
+
+    font-weight: 500;
+    font-size: 18px;
+    box-shadow: 1px 1px 1px #5d9d54;
+}
