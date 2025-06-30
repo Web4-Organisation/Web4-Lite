@@ -1,0 +1,49 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80" # Map host port 8080 to container port 80
+    volumes:
+      - .:/var/www/html # Mount current directory to document root for development
+    depends_on:
+      - db
+    environment:
+      # These are not directly used by the app's db.inc.php in its current form,
+      # but are good practice. The db.inc.php would need modification to use env vars.
+      # For now, the app will connect to 'db:3306' with credentials defined in db service.
+      # We will need to manually update db.inc.php after the first run or provide a setup script.
+      DB_HOST: db
+      DB_PORT: 3306
+      # The actual credentials used by db.inc.php will be those set for the db service below.
+      # It's crucial that db.inc.php is updated to use:
+      # DB_HOST = 'db'
+      # DB_USER = 'app_user'
+      # DB_PASS = 'app_password'
+      # DB_NAME = 'app_db'
+    networks:
+      - app-network
+
+  db:
+    image: mysql:5.7 # Using MySQL 5.7 as it's often compatible with older PHP apps
+    ports:
+      - "3306:3306" # Expose MySQL port for direct access if needed (e.g. for a GUI client)
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password # Change in production
+      MYSQL_DATABASE: app_db
+      MYSQL_USER: app_user
+      MYSQL_PASSWORD: app_password # Change in production
+    volumes:
+      - db_data:/var/lib/mysql # Persist database data
+    networks:
+      - app-network
+
+volumes:
+  db_data:
+
+networks:
+  app-network:
+    driver: bridge
