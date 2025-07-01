@@ -81,7 +81,7 @@ Reactions.make = function (itemId, reaction) {
 
     $.ajax({
         type: 'POST',
-        url: '/api/v2/method/reactions.make',
+        url: '/api/v2/method/reactions.react',
         data: 'accessToken=' + account.accessToken + "&accountId=" + account.id + "&itemId=" + itemId + "&reaction=" + reaction,
         dataType: 'json',
         timeout: 30000,
