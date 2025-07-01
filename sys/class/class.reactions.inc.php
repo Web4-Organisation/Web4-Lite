@@ -24,14 +24,14 @@ class reactions extends db_connect
 {
 	private $requestFrom = 0;
     private $language = 'en';
-    private $table = 'likes';
+    private $table = 'reactions';
     private $itemType = ITEM_TYPE_POST;
 
 	public function __construct($dbo = NULL)
     {
 		parent::__construct($dbo);
 
-        $this->table = 'likes';
+        $this->table = 'reactions';
 	}
 
     public function allCount()
@@ -58,7 +58,7 @@ class reactions extends db_connect
             "type_5" => 0
         );
 
-        $sql = "SELECT id, likeType FROM $this->table WHERE itemId = (:itemId) AND removeAt = 0";
+        $sql = "SELECT id, reactionType FROM $this->table WHERE itemId = (:itemId) AND removeAt = 0";
 
         $stmt = $this->db->prepare($sql);
         $stmt->bindParam(":itemId", $itemId, PDO::PARAM_INT);
@@ -70,7 +70,7 @@ class reactions extends db_connect
                 while ($row = $stmt->fetch()) {
 
                     $result['count']++;
-                    $result['type_' . $row['likeType']]++;
+                    $result['type_' . $row['reactionType']]++;
                 }
             }
         }
@@ -87,7 +87,7 @@ class reactions extends db_connect
             "type" => 0,
         );
 
-        $sql = "SELECT id, likeType FROM $this->table WHERE fromUserId = (:fromUserId) AND itemId = (:itemId) AND removeAt = 0 LIMIT 1";
+        $sql = "SELECT id, reactionType FROM $this->table WHERE fromUserId = (:fromUserId) AND itemId = (:itemId) AND removeAt = 0 LIMIT 1";
 
         $stmt = $this->db->prepare($sql);
         $stmt->bindParam(":fromUserId", $fromUserId, PDO::PARAM_INT);
@@ -99,7 +99,7 @@ class reactions extends db_connect
             $row = $stmt->fetch();
 
             $result['exists'] = true;
-            $result['type'] = $row['likeType'];
+            $result['type'] = $row['reactionType'];
         }
 
         return $result;
@@ -127,7 +127,7 @@ class reactions extends db_connect
 
         } else {
 
-            $sql = "SELECT * FROM $this->table WHERE itemId = (:itemId) AND id < (:reactionId) AND removeAt = 0 AND likeType = $reaction ORDER BY id DESC LIMIT 20";
+            $sql = "SELECT * FROM $this->table WHERE itemId = (:itemId) AND id < (:reactionId) AND removeAt = 0 AND reactionType = $reaction ORDER BY id DESC LIMIT 20";
         }
 
         $stmt = $this->db->prepare($sql);
@@ -143,7 +143,7 @@ class reactions extends db_connect
                     $profile = new profile($this->db, $row['fromUserId']);
                     $profile->setRequestFrom($this->getRequestFrom());
                     $profileInfo = $profile->getVeryShort();
-                    $profileInfo['reaction'] = $row['likeType'];
+                    $profileInfo['reaction'] = $row['reactionType'];
                     unset($profile);
 
                     array_push($result['items'], $profileInfo);
@@ -246,13 +246,13 @@ class reactions extends db_connect
         $gcm_notify_type = GCM_NOTIFY_LIKE;
         $notify_type = NOTIFY_TYPE_LIKE;
 
-        $sql = "INSERT INTO $this->table (toUserId, fromUserId, itemId, likeType, createAt, ip_addr) value (:toUserId, :fromUserId, :itemId, :likeType, :createAt, :ip_addr)";
+        $sql = "INSERT INTO $this->table (toUserId, fromUserId, itemId, reactionType, createAt, ip_addr) value (:toUserId, :fromUserId, :itemId, :reactionType, :createAt, :ip_addr)";
 
         $stmt = $this->db->prepare($sql);
         $stmt->bindParam(":toUserId", $itemInfo['fromUserId'], PDO::PARAM_INT);
         $stmt->bindParam(":fromUserId", $this->requestFrom, PDO::PARAM_INT);
         $stmt->bindParam(":itemId", $itemInfo['id'], PDO::PARAM_INT);
-        $stmt->bindParam(":likeType", $reaction, PDO::PARAM_INT);
+        $stmt->bindParam(":reactionType", $reaction, PDO::PARAM_INT);
         $stmt->bindParam(":createAt", $createAt, PDO::PARAM_INT);
         $stmt->bindParam(":ip_addr", $ip_addr, PDO::PARAM_STR);
         $stmt->execute();
@@ -302,5 +302,11 @@ class reactions extends db_connect
     public function getRequestFrom()
     {
         return $this->requestFrom;
+    }
+
+    public function react($itemId, $reaction)
+    {
+        // react method is an alias for make method to maintain API compatibility
+        return $this->make($itemId, $reaction);
     }
 }
